@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "",
   "main": "dist/uiy.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "scripts": {
     "precommit": "lint-staged",
     "build": "NODE_ENV=production webpack --progress -p --config scripts/config/webpack.config.prod.js",
@@ -10,8 +14,8 @@
     "format": "prettier-eslint --write public/**/*.js",
     "lint": "eslint public/**/*.js",
     "lint:fix": "eslint --fix public/js",
-    "test": "NODE_ENV=development jest",
-    "jest": "jest"
+    "test:jest": "NODE_ENV=development jest",
+    "publish:prepare": "bash ./scripts/publish/prepare.sh"
   },
   "keywords": [],
   "author": "",
@@ -63,7 +67,9 @@
     "@types/react-dom": "^16.0.4",
     "babel-loader": "^7.1.2",
     "classnames": "^2.2.5",
+    "element-react": "^1.4.5",
     "lint-staged": "^7.0.0",
+    "micro": "^9.1.0",
     "omit.js": "^1.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
