@@ -2,7 +2,7 @@
   "name": "uiy",
   "version": "0.0.1",
   "description": "",
-  "main": "dist/uiy.js",
+  "main": "lib/uiy.js",
   "repository": {
     "type": "git",
     "url": ""
@@ -10,11 +10,13 @@
   "scripts": {
     "precommit": "lint-staged",
     "build": "NODE_ENV=production webpack --progress -p --config scripts/config/webpack.config.prod.js",
+    "build:lib": "NODE_ENV=production webpack --progress -p --config scripts/config/webpack.config.lib.js",
     "start": "NODE_ENV=development webpack-dev-server --config scripts/config/webpack.config.dev.js",
     "format": "prettier-eslint --write public/**/*.js",
     "lint": "eslint public/**/*.js",
     "lint:fix": "eslint --fix public/js",
     "test:jest": "NODE_ENV=development jest",
+    "clean": "rimraf dist",
     "publish:prepare": "bash ./scripts/publish/prepare.sh"
   },
   "keywords": [],
@@ -73,7 +75,12 @@
     "omit.js": "^1.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "uiw": "^1.7.0",
     "webpack-dev-server": "^2.11.1"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "jest": {
     "testRegex": "(/jest/.+\\.(js|jsx)$)|_test.jsx?$"

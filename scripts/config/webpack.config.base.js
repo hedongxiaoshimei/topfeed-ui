@@ -1,9 +1,13 @@
 process.env.NODE_ENV === 'development'
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const basePath = path.join(__dirname, '../..');
+const srcPath = path.join(basePath, 'site');
 const outputPath = path.join(basePath, 'dist');
+const templatePath = path.join(basePath, 'site');
 module.exports = {
+  entry: srcPath,
   output: {
     path: outputPath,
     filename: 'uiy.js'
@@ -39,7 +43,10 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: '[chunkhash:12].css'
+      filename: 'uiy.css'
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(templatePath, 'index.html')
     })
   ],
   resolve:{
