@@ -18,7 +18,8 @@
     "test:jest": "cross-env NODE_ENV=development jest",
     "clean": "rimraf dist",
     "publish:prepare": "bash ./scripts/publish/prepare.sh",
-    "new": "node ./scripts/bin/new.js"
+    "new": "node ./scripts/bin/new.js",
+    "deploy": "gh-pages --dist dist --branch gh-pages"
   },
   "keywords": [],
   "author": "",
@@ -55,7 +56,13 @@
     "typescript": "^2.7.2",
     "uppercamelcase": "^3.0.0",
     "webpack": "^3.11.0",
-    "webpack-merge": "^4.1.2"
+    "webpack-merge": "^4.1.2",
+    "webpack-dev-server": "^2.11.1",
+    "babel-loader": "^7.1.2",
+    "@babel/types": "^7.0.0-beta.40",
+    "@types/react": "^16.0.38",
+    "@types/react-dom": "^16.0.4",
+    "lint-staged": "^7.0.0"
   },
   "lint-staged": {
     "*.{js,ts,tsx,scss}": [
@@ -69,19 +76,10 @@
     "semi": true
   },
   "dependencies": {
-    "@babel/types": "^7.0.0-beta.40",
-    "@types/react": "^16.0.38",
-    "@types/react-dom": "^16.0.4",
-    "babel-loader": "^7.1.2",
     "classnames": "^2.2.5",
-    "element-react": "^1.4.5",
-    "lint-staged": "^7.0.0",
-    "micro": "^9.1.0",
     "omit.js": "^1.0.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "uiw": "^1.7.0",
-    "webpack-dev-server": "^2.11.1"
+    "react-dom": "^16.2.0"
   },
   "peerDependencies": {
     "react": "^16.0.0",
