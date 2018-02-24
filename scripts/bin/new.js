@@ -32,7 +32,7 @@ fs.appendFile(
 const Files = [
   {
     filename: `src/${componentname}/index.tsx`,
-    content: `import React from 'react';
+    content: `import  React from 'react';
 import classNames from 'classnames';
 
 export interface ${ComponentName}Props {
@@ -44,6 +44,12 @@ export default class ${ComponentName} extends React.Component {
     return 
   }
 };`
+  },
+  {
+    filename: 'src/${componentname}/__test__/${componentname}_test.js',
+    content: `test('unit test', () => {
+  expect(sum(1, 2)).toBe(3);
+});`
   },
   {
     filename: `docs/${componentname}.md`,
@@ -61,7 +67,7 @@ export default class ${ComponentName} extends MarkDown {
 }
 `
   }
-  // todo add test file and update site/pages/index.js
+  // todo update site/pages/index.js
 ];
 
 
