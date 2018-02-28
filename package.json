@@ -1,11 +1,12 @@
 {
   "name": "uiy",
   "version": "0.0.2",
-  "description": "",
+  "description": "an react ui library",
+  "homepage": "https://hardfist.github.io/uiy/",
   "main": "lib/uiy.js",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/hardfist/uiy"
   },
   "scripts": {
     "precommit": "lint-staged",
@@ -21,7 +22,14 @@
     "new": "node ./scripts/bin/new.js",
     "deploy": "gh-pages --dist dist --branch gh-pages"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "ui",
+    "frontend"
+  ],
+  "bugs": {
+    "url": "https://github.com/hardfist/uiy/issues"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -76,6 +84,7 @@
     "semi": true
   },
   "dependencies": {
+    "ant-design": "^1.0.0",
     "classnames": "^2.2.5",
     "omit.js": "^1.0.0",
     "react": "^16.2.0",
