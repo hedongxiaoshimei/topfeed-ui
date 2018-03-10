@@ -4,6 +4,7 @@
 /es5
 /dll
 /.vscode
+/lib
 .cache
 
 __snapshots__

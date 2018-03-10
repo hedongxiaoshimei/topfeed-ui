@@ -7,8 +7,8 @@ import 'codemirror/mode/jsx/jsx';
 import 'codemirror/keymap/sublime';
 import 'codemirror/addon/comment/comment';
 
-import 'codemirror/lib/codemirror.css';
 import './style.scss';
+import 'codemirror/lib/codemirror.css';
 
 export default class Editor extends Component {
   componentDidMount() {
