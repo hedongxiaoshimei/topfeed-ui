@@ -73,7 +73,7 @@
     "lint-staged": "^7.0.0"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,scss}": [
+    "*.{js,ts,tsx}": [
       "npm run format --",
       "npm run lint:fix --",
       "git add"
@@ -88,6 +88,7 @@
     "classnames": "^2.2.5",
     "omit.js": "^1.0.0",
     "react": "^16.2.0",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2"
   },
@@ -96,6 +97,6 @@
     "react-dom": "^16.0.0"
   },
   "jest": {
-    "testRegex": "(/jest/.+\\.(js|jsx)$)|_test.jsx?$"
+    "testRegex": "_test.jsx?$"
   }
 }
